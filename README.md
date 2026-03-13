@@ -60,6 +60,21 @@ An enterprise-grade, full-stack SaaS application that allows users to securely u
 
 ---
 
+## 💳 Testing the Premium Payment Flow (Stripe Test Mode)
+
+This application is currently running in Stripe's **Test Mode**. You do not need a real credit card to test the Premium upgrade flow. Follow these steps to unlock the AI features:
+
+1. **Create an Account:** Register a new user on the frontend and log in.
+2. **Trigger the Paywall:** On the dashboard, click the **"New Analysis"** button. Since you are a free user, the Premium Upgrade modal will appear.
+3. **Go to Checkout:** Click **"Upgrade Now"** to be redirected to the secure Stripe Checkout page.
+4. **Use Test Credentials:** Enter the following mock data into the Stripe checkout form:
+   * **Card Number:** `4242 4242 4242 4242`
+   * **Expiration Date:** Any date in the future (e.g., `12 / 34`)
+   * **CVC:** Any 3 digits (e.g., `123`)
+   * **Name & ZIP Code:** Any random text/numbers
+5. **Verify the Upgrade:** Click **Pay**. You will be redirected back to the dashboard, see a "Verifying Payment..." loading screen, and instantly receive the glowing gold **👑 PRO** badge.
+6. **Test the AI:** Click **"New Analysis"** again—the paywall is gone, and the PDF Upload Modal will now open!
+
 ## 💻 Getting Started (Local Development)
 
 ### Prerequisites
